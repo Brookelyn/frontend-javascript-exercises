@@ -25,16 +25,16 @@ module.exports.checkLock = function(a, b, c, d){
 };
 
 module.exports.canIGet = function(item, money){
-	if (item == "MacBook Air" && money == 999){
+	if (item == "MacBook Air" && money >= 999){
 		return true;
 	}
-	if (item == "MacBook Pro" && money == 1299){
+	if (item == "MacBook Pro" && money >= 1299){
 		return true;
 	}
-	if (item == "Mac Pro" && money == 2499){
+	if (item == "Mac Pro" && money >= 2499){
 		return true;
 	}
-	if (item == "Apple Sticker" && money == 1){
+	if (item == "Apple Sticker" && money >= 1){
 		return true;
 	}
 	else {
