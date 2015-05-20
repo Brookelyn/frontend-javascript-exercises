@@ -1,5 +1,30 @@
-module.exports.copy = undefined;
+module.exports.copy = function(object){
+	var newObject = {};
+	
+	for(var key in object) {
+		newObject[key] = object[key];
+	}
+	
+	return newObject;
+};
 
-module.exports.extend = undefined;
+module.exports.extend = function(dest, src){
+	for (var key in src) {
+		dest[key] = src[key];
+	}
 
-module.exports.hasElems = undefined;
+	return dest;
+};
+
+module.exports.hasElems = function(object, array){
+	for (var i = 0; i < array.length; i++){
+		if(!(array[i] in object)){
+			return false;
+		}		
+	}
+
+	return true;
+};
+
+
+
